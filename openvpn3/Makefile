@@ -14,4 +14,8 @@ stop:
 status:
 	@openvpn3 sessions-list
 
+hostvds:
+	echo "Your password c************4"
+	ssh root@95.182.115.174
+
 # символ @ нужен чтобы лишний раз не выводил команду которую выполняет
