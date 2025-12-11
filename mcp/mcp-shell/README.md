@@ -277,3 +277,20 @@ Ensure code is formatted (`make fmt`) and passes tests (`make test`).
 ## License
 
 MIT License - See LICENSE file for details.
+
+## My MCP json:
+
+```json
+{
+  "mcpServers": {
+    "shell": {
+      "command": "/home/lorriant/lifehack/mcp/mcp-shell/bin/mcp-shell",
+      "args": [],
+      "env": {
+        "MCP_SHELL_LOG_LEVEL": "info",
+        "MCP_SHELL_SECURITY_ENABLED": "true"
+      }
+    }
+  }
+}
+```
