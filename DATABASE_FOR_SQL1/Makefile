@@ -1,8 +1,8 @@
 up:
-	sudo docker compose up --build
+	docker compose up --build
 
 down:
-	sudo docker compose down -v
+	docker compose down -v
 
 connect:
 	psql -U postgres -d school21 -h localhost -p 5432
