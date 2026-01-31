@@ -1,5 +1,5 @@
 CONFIG_NAME := lorriant
-CONFIG_FILE := client.ovpn
+CONFIG_FILE := computers.ovpn
 
 # в корне должен быть файл с конфигом client.ovpn
 create:
@@ -13,9 +13,11 @@ stop:
 
 status:
 	@openvpn3 sessions-list
+ls:
+	@openvpn3 configs-list
 
 hostvds:
 	echo "Your password c************4"
-	ssh root@95.182.115.174
+	ssh root@95.182.116.227
 
 # символ @ нужен чтобы лишний раз не выводил команду которую выполняет
