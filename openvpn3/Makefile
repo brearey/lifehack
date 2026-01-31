@@ -1,20 +1,23 @@
 CONFIG_NAME := lorriant
-CONFIG_FILE := computers.ovpn
+CONFIG_FILE := linux.ovpn
 
 # в корне должен быть файл с конфигом client.ovpn
 create:
-	@openvpn3 config-import --config ~/$(CONFIG_FILE) --name $(CONFIG_NAME) --persistent
+	@sudo openvpn3 config-import --config ~/$(CONFIG_FILE) --name $(CONFIG_NAME) --persistent
 
 start:
-	@openvpn3 session-start --config $(CONFIG_NAME)
+	@sudo openvpn3 session-start --config $(CONFIG_NAME)
 
 stop:
-	@openvpn3 session-manage --config $(CONFIG_NAME) --disconnect
+	@sudo openvpn3 session-manage --config $(CONFIG_NAME) --disconnect
 
 status:
-	@openvpn3 sessions-list
+	@sudo openvpn3 sessions-list
+remove:
+	@sudo openvpn3 config-remove --config $(CONFIG_NAME)
+
 ls:
-	@openvpn3 configs-list
+	@sudo openvpn3 configs-list --verbose
 
 hostvds:
 	echo "Your password c************4"
