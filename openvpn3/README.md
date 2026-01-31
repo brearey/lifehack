@@ -6,6 +6,8 @@ https://github.com/Nyr/openvpn-install.git
 wget https://git.io/vpn -O openvpn-install.sh
 https://openvpn.net/community/
 
+
+## If OpenVP UI
 cd openvpn-server/
 sudo docker compose up -d --build
 open URL: http://95.182.116.227:8080 in browser

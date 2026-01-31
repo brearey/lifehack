@@ -1,5 +1,6 @@
 CONFIG_NAME := lorriant
 CONFIG_FILE := linux.ovpn
+SERVER_IP := 95.182.116.227
 
 # в корне должен быть файл с конфигом client.ovpn
 create:
@@ -21,6 +22,9 @@ ls:
 
 hostvds:
 	echo "Your password c************4"
-	ssh root@95.182.116.227
+	ssh root@$(SERVER_IP)
+
+download:
+	scp root@$(SERVER_IP):/root/$(CONFIG_FILE) /home/lorriant/$(CONFIG_FILE)
 
 # символ @ нужен чтобы лишний раз не выводил команду которую выполняет
